@@ -1,0 +1,199 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+.unselectable {
+  cursor:move;
+}
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background:none;
+}
+
+html{
+  background:#f9f9f9;
+}
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  margin-top:30px;
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 800px) {
+  .container {
+    max-width: 800px;
+  }
+  .row {
+    max-width: 800px;
+  }
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+
+
+/* TODO */
+
+.md-tile-left{
+  float:left;
+  margin-top:35px;
+  margin-left:-35px;
+}
+
+// .md-tile-left::before{
+//   float:left;
+//   border-radius:50%;
+//   content:"";
+//   background:#f9f9f9;
+//   height:70px;
+//   width:70px;
+//   position:absolute;
+//   margin-top:-7px;
+//   margin-left:-7px;
+// }
+
+
+.md-tile-content{
+  padding-left:50px;
+  h2{
+
+  }
+  h4{
+    font-size:1em;
+    font-weight:bold;
+    color:#E91E63;
+
+  }
+
+  p{
+    font-size:1em;
+    margin-top:10px;
+  }
+
+}
+
+md-icon svg path{
+  margin: auto;
+  background-repeat: no-repeat no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  fill: #fff;
+  height: 24px;
+  width: 24px;
+}
+
+.md-button.md-default-theme.md-fab:not([disabled]):hover, .md-button.md-default-theme.md-fab:not([disabled]):focus {
+  background-color: #fff;
+  color:#fff;
+}
+
+
+.addTodo{
+  background:#303F9F;
+  color:#fff;
+  padding:25px;
+}
+
+.addTodo .md-toolbar-tools{
+  color:#fff;
+  font-size:2em;
+  padding:0;
+}
+.addTodo .md-toolbar-tools h1{
+  padding:0;
+}
+.addTodo .md-toolbar-tools span{
+  color:#fff;
+  font-size:1em;
+}
+
+
+
+md-input-container.md-default-theme .md-input{
+  color:#fff;
+  border-color: rgba(0,0,0,0.2);
+}
+
+md-input-container.md-default-theme label, md-input-container.md-default-theme .md-placeholder {
+  color:rgba(255,255,255,0.8);
+}
+
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused label{
+  color:rgba(255,255,255,0.8);
+}
+
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-has-value label{
+  color:rgba(255,255,255,1);
+}
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused .md-input{
+  border-color: rgba(0,0,0,0.2);
+}
+
+
+
+.searchTag{
+  padding-left:25px;
+  padding-right:25px;
+  margin-top:40px;
+  margin-bottom:-30px;
+  background:#E91E63;
+  color:#fff;
+}
+
+
+#inputColor::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+#inputColor::-webkit-color-swatch {
+    border: none!important;
+}
+
+
+p.noInspi{
+  margin-top:40px;
+  font-size:1.5em;
+  text-align:center;
+}
+
+

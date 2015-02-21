@@ -1,0 +1,109 @@
+
+    <div class="container">
+
+
+    <form role="form" ng-submit="addInspi()">
+
+        <!-- Todos input -->
+        <div class="row md-whiteframe-z1 addTodo md-primary">
+            <h1 class="md-toolbar-tools">
+              <span>Add an inspiration</span>
+            </h1>
+            <div layout layout-sm="column">
+                <md-input-container style="width:50%;padding-bottom:0;">
+                    <label>Title</label>
+                    <input ng-model="inspi.title">
+                </md-input-container>
+                <md-input-container style="width:50%;padding-bottom:0;">
+                    <label>Link</label>
+                    <input ng-model="inspi.link">
+                </md-input-container>
+            </div>
+            <!-- <div layout layout-sm="column">
+                <div style="width:100%;padding-bottom:0;margin-top:15px;">
+                    <tags-input ng-model="inspi.tags">
+                      <auto-complete source="loadTags($query)"></auto-complete>
+                    </tags-input>
+                </div>
+            </div>
+
+            <div layout layout-sm="column">
+                <div style="width:100%;padding-bottom:0;margin-top:15px;">
+                    <label>Color</label>
+                    <input type="color" ng-model="inspi.color" ng-init="inspi.color='#E91E63'">
+                </div>
+            </div> -->
+            <div layout layout-sm="column">
+                <div style="width:10%;padding-bottom:0;margin-top:25px;margin-right:10px;">
+                    <input id="inputColor" type="color" ng-model="inspi.color" ng-init="inspi.color='#E91E63'" style="width:100%;-webkit-appearance: none; border: none;">
+                </div>
+                <div style="width:90%;padding-bottom:0;margin-top:15px;">
+                   <tags-input ng-model="inspi.tags">
+                      <auto-complete source="loadTags($query)"></auto-complete>
+                    </tags-input>
+                </div>
+                
+            </div>
+
+            <div class="submitTodo" style="text-align:right;margin-top:10px;">
+                <md-button type="submit">Add inspiration</md-button>
+                <md-button type="reset" class="md-accent">Cancel</md-button>
+            </div>
+        </div>
+    </form>
+
+
+    <div class="row md-whiteframe-z1 md-primary searchTag">
+        <div layout layout-sm="column">
+            <md-input-container style="width:100%;padding-bottom:10px;">
+                <label>Search inspiration</label>
+                <input type="text" ng-model="tagsearch">
+            </md-input-container>
+        </div>
+    </div>
+
+
+   
+    
+
+    <div class="row" ui-sortable ng-model="inspirations" style="margin-top:30px">
+        <div class="full input-group md-whiteframe-z1" ng-repeat="inspi in inspirations | filter:tagsearch" style="width:100%;max-width:800px;padding:5px 10px; cursor: move;background:#fff;margin-top:15px;">
+            <div class="">
+                <div class="md-tile-left">
+                    <md-button class="md-fab md-accent s36" aria-label="Check" style="padding:17px;padding-top:19px;padding-bottom:20px;background-color:{{inspi.color}}" ng-href="{{ trustUrl(inspi.link) }}" target="_blank">
+                        <md-icon md-svg-src="images/icons/0166-rocket.svg" md-svg-style="fill:blue;"></md-icon>
+                    </md-button>
+                </div>
+                <div class="md-tile-content">
+                    <h2 style="margin-top:0;">{{inspi.title}}</h2>
+                    
+                    <!-- <a target="_blank" ng-href="{{ trustUrl(inspi.link) }}">View website</a> -->
+                    
+                    <p>
+                      <span ng-repeat="tag in inspi.tags" style="padding-right:7px;color:{{inspi.color}}">{{tag.text}}</span>
+                    </p>
+                    <md-button class="md-primary" ng-click="removeInspi($index)">
+                      Remove this inspiration
+                    </md-button>
+                    <!-- <md-button class="md-primary" ng-click="showConfirm($event, $index)">
+                      Remove this inspiration
+                    </md-button> -->
+                    
+                </div>
+            </div>
+        </div>
+        <div class="" ng-show="!inspirations.length">
+            <p class="noInspi">
+            There are no inspiration sites :(
+            </p>
+        </div>
+    </div>
+
+
+
+    
+
+
+
+</div>
+
