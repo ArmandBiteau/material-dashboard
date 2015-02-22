@@ -1,0 +1,9 @@
+{
+  "name": "todo",
+  "author": "Armand Biteau",
+  "description": "A cool dashboard.",
+  "version": "0.0.0",
+  "dependencies": {
+    "statik": "~1.2.5"
+  }
+}
