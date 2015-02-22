@@ -28,6 +28,10 @@ angular
 
   .config(function ($routeProvider) {
     $routeProvider
+      .when('/', {
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl'
+      })
       .when('/todo', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
