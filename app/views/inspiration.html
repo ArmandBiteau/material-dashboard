@@ -34,15 +34,27 @@
                 </div>
             </div> -->
             <div layout layout-sm="column">
-                <div style="width:10%;padding-bottom:0;margin-top:25px;margin-right:10px;">
-                    <input id="inputColor" type="color" ng-model="inspi.color" ng-init="inspi.color='#E91E63'" style="width:100%;-webkit-appearance: none; border: none;">
+
+
+                <div style="width:5%;height:30px;padding-bottom:0;margin-top:20px;margin-right:10px;">
+                    <input id="inputColor" type="color" ng-model="inspi.color" ng-init="inspi.color='#E91E63'" 
+                    style="width:30px;height:30px;-webkit-appearance: none; border: none;">
                 </div>
-                <div style="width:90%;padding-bottom:0;margin-top:15px;">
-                   <tags-input ng-model="inspi.tags">
-                      <auto-complete source="loadTags($query)"></auto-complete>
+
+
+                <div style="width:95%;padding-bottom:0;margin-top:15px;margin-left:5px;">
+                   <tags-input ng-model="inspi.tags" class="ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-max-tags ng-valid-min-tags ng-valid-leftover-text" tabindex="0" aria-invalid="false">
+                   
+                        <div class="tags" ng-class="{focused: hasFocus}">
+                            <ul class="tag-list"><!-- ngRepeat: tag in tagList.items track by track(tag) --></ul>
+                            <input class="input ng-pristine ng-valid ng-touched invalid-tag" placeholder="Add a tag" tabindex="" ng-model="newTag.text" ng-change="newTagChange()" ng-trim="false" ng-class="{'invalid-tag': newTag.invalid}" ti-autosize="" aria-invalid="false" style="width:auto">
+                            <span class="input" style="visibility: hidden; width: auto; white-space: pre; display: none;">Add a tag</span>
+                        </div>
                     </tags-input>
                 </div>
-                
+
+
+
             </div>
 
             <div class="submitTodo" style="text-align:right;margin-top:10px;">
@@ -82,12 +94,12 @@
                     <p>
                       <span ng-repeat="tag in inspi.tags" style="padding-right:7px;color:{{inspi.color}}">{{tag.text}}</span>
                     </p>
-                    <md-button class="md-primary" ng-click="removeInspi($index)">
-                      Remove this inspiration
-                    </md-button>
-                    <!-- <md-button class="md-primary" ng-click="showConfirm($event, $index)">
+                   <!--  <md-button class="md-primary" ng-click="removeInspi($index)">
                       Remove this inspiration
                     </md-button> -->
+                    <md-button class="md-primary" ng-click="showConfirm($event, $index)">
+                      Remove this inspiration
+                    </md-button>
                     
                 </div>
             </div>

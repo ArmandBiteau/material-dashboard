@@ -32,12 +32,14 @@
         <ul class="nav nav-pills pull-right">
           <li><md-button class="md-primary" ng-href="#/todo">Todo</md-button></li>
           <li><md-button class="md-primary" ng-href="#/inspiration">Inspiration</md-button></li>
+          <li><md-button class="md-primary" ng-href="#/calendar">Calendar</md-button></li>
+
         </ul>
         <h3 class="text-muted"><md-button class="md-primary" ng-href="#/">Dashboard</md-button></h3>
       </div>
     </div>
 
-      <div ng-view=""></div>
+    <div ng-view=""></div>
 
     <div class="container">
       <div class="footer">
@@ -45,9 +47,6 @@
       </div>
     </div>
     
-
-
-
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -103,8 +102,8 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/about.js"></script>
     <script src="scripts/controllers/inspiration.js"></script>
+    <script src="scripts/controllers/home.js"></script>
     <!-- endbuild -->
     <script src="scripts/custom.js"></script>
 
