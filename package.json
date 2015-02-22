@@ -3,6 +3,10 @@
   "author": "Armand Biteau",
   "description": "A cool dashboard.",
   "version": "0.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.1",
